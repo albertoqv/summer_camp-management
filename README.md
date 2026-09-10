@@ -16,7 +16,7 @@
 
 ## El problema
 
-Un campamento de verano tiene más reglas de negocio de las que parece a simple vista: hay que controlar el aforo de cada campamento, repartir a los asistentes por nivel educativo (preescolar, primaria, adolescentes), asignar monitores a las actividades —con un mínimo de monitores por actividad— y, cuando un asistente necesita atención especial, garantizar que el campamento cuenta con un monitor de educación especial disponible. A eso se suma la gestión de inscripciones completas o parciales, con un precio distinto y unos plazos de alta/baja que cambian según la inscripción se haga en periodo de *early* o *late registration* respecto a la fecha de inicio del campamento.
+Un campamento de verano tiene más reglas de negocio de las que parece a simple vista: hay que controlar el aforo de cada campamento, repartir a los asistentes por nivel educativo (preescolar, primaria, adolescentes), asignar monitores a las actividades con un mínimo de monitores por actividad y, cuando un asistente necesita atención especial, garantizar que el campamento cuenta con un monitor de educación especial disponible. A eso se suma la gestión de inscripciones completas o parciales, con un precio distinto y unos plazos de alta/baja que cambian según la inscripción se haga en periodo de *early* o *late registration* respecto a la fecha de inicio del campamento.
 
 **Summer Camp Manager** nace como respuesta a ese enunciado: una aplicación que centraliza el alta de campamentos, actividades y monitores, gestiona las inscripciones con sus reglas de precio y plazos, y avisa cuando una regla de negocio no se cumple (una actividad sin monitores suficientes, un campamento sin el monitor especializado que necesita, un asistente que ya está inscrito, etc.) en lugar de dejar que ese error pase desapercibido.
 
@@ -25,8 +25,8 @@ Un campamento de verano tiene más reglas de negocio de las que parece a simple 
 El proyecto sigue **Arquitectura Limpia por capas**, con una separación estricta entre:
 
 - **`business/`** — la lógica de negocio: DTOs, managers (`AssistantsManager`, `CampsManager`, `InscriptionManager`, `UsersManager`), factories de inscripción (`EarlyRegisterInscriptionFactory` / `LateRegisterInscriptionFactory`, según la fecha de inscripción respecto al inicio del campamento) y más de 25 excepciones de dominio propias, una por cada regla de negocio incumplida.
-- **`data/`** — el acceso a datos, con **dos implementaciones intercambiables** de cada DAO: una en base de datos (MySQL, con las consultas parametrizadas en `sql.properties`) y otra en memoria (`data/memory/`). Esto permite testear toda la lógica de negocio sin depender de una base de datos real.
-- **`display/`** — dos interfaces sobre la misma lógica de negocio: una por consola (`display/cli/`, con menús de texto) y otra web (`display/web/`, con Servlets y JSP siguiendo el patrón MVC, más filtros para control de acceso y de sesión).
+ **`data/`** — el acceso a datos, con **dos implementaciones intercambiables** de cada DAO: una en base de datos (MySQL, con las consultas parametrizadas en `sql.properties`) y otra en memoria (`data/memory/`). Esto permite testear toda la lógica de negocio sin depender de una base de datos real.
+ **`display/`** — dos interfaces sobre la misma lógica de negocio: una por consola (`display/cli/`, con menús de texto) y otra web (`display/web/`, con Servlets y JSP siguiendo el patrón MVC, más filtros para control de acceso y de sesión).
 
 ```
 web/src/main/java

@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  Aplicación de gestión de campamentos de verano — proyecto de equipo, asignatura de Diseño de Sistemas Software, Universidad de Córdoba.
+  Aplicación de gestión de campamentos de verano — proyecto de equipo, Programación Web, Universidad de Córdoba.
 </p>
 
 <p align="center">

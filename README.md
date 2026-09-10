@@ -44,16 +44,6 @@ web/tests/       → suite de tests JUnit 5, organizada en domain/ y managers/
 - Aviso de asistentes que requieren atención especial y validación de que el campamento cuenta con el monitor de educación especial correspondiente.
 - Acceso a la aplicación por roles de usuario (administrador / asistente), con filtros de sesión y control de acceso en la capa web.
 
-## Capturas de pantalla
-
-*(Pendiente de añadir — ver la sección "Cómo ejecutarlo" más abajo para desplegar la aplicación y capturar las vistas reales. Una vez tengas las imágenes, colócalas en `docs/screenshots/` y sustituye estas líneas por, por ejemplo:)*
-
-```markdown
-![Login](docs/screenshots/login.png)
-![Gestión de campamentos](docs/screenshots/camps.png)
-![Inscripciones](docs/screenshots/inscriptions.png)
-```
-
 ## Cómo ejecutarlo
 
 El proyecto está montado como un **Dynamic Web Project de Eclipse** (no usa Maven ni Gradle), así que la vía más directa para levantarlo es Eclipse + Tomcat + MySQL:

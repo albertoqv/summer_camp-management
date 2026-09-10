@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #261911;
+	font-family: "Segoe UI","Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+}
+
+.login_main {
+    background-color: #ffec99;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.login_page_div {
+    background-color: white;
+    box-shadow: 0px 10px 15px -3px rgb(38, 24, 16, 0.1);
+    border-radius: 2rem;
+    padding: 7rem 5rem;
+    display: flex;
+    margin: auto;
+    max-width: 800px;
+    gap: 5rem;
+}
+
+p {
+	font-size: 0.8rem;
+	max-width: 200px;
+}
+
+.login_form a {
+    color: #2698ff;
+    text-decoration: none;
+}
+.form_input {	
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+    margin-bottom: 0.5rem;
+    border: none;
+    border-bottom: 1px solid #666;
+    outline: none;
+}
+
+.form_input:focus {
+    border-bottom: 2px solid #86BBD8;
+    outline: none;
+}
+.form_input::-moz-focus-inner {
+    border-bottom: 2px solid #86BBD8;
+    outline: none;
+}
+
+.login_form input::placeholder {
+  color: black;
+  opacity: 0.7;
+}
+
+.login_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login_form_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form_div h1 {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.login_btn {
+    background-color: #ffec99;
+    border: none;
+    border-radius: none;
+	box-shadow: none;
+	padding: 0.6rem;
+	transition: all linear 0.1s;
+}
+
+.login_btn:hover {
+    background-color: #f2a549;
+    color: white;
+	cursor: pointer;
+}

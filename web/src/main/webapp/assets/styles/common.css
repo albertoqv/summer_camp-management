@@ -1,0 +1,385 @@
+@charset "UTF-8";
+
+body {
+	margin: 0;
+	padding: 0;
+	color: #261911;
+	font-family: "Segoe UI","Helvetica Neue","Lucida Grande","Roboto","Ebrima","Nirmala UI","Gadugi","Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI","Tunga","Lao UI","Raavi","Iskoola Pota","Latha","Leelawadee","Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math";
+	background-color: #ffec99;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* HEADER */
+.header{
+	height: 4rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 85rem;
+	max-width: 90%;
+	background-color: white;
+	margin-top: 1rem;
+	box-shadow: 0px 10px 15px -3px rgb(38, 24, 16, 0.1);
+    border-radius: 2rem;
+}
+
+.header_logo_image {
+	margin-left: 2rem;
+}
+
+.header_user_details {
+	height: min-content;
+	margin-right: 2rem;
+}
+
+.header_user_details_info {
+	position: absolute;
+	float: right; 
+	margin-left: 80px;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header_user_details_info a{
+	position: relative;
+	padding: 1rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+	box-shadow: 0px 10px 15px -3px rgb(38, 24, 16, 0.1);
+}
+
+.header_user_details_info a:hover{
+    background-color:  #f2a549;
+    color: white;
+    cursor: pointer;
+}
+
+.header_user_wellcome_summary { 
+  list-style: none;
+  border-bottom: 1px dashed rgb(119, 118, 123);
+}
+.header_user_wellcome_summary:hover {
+	cursor: pointer;
+}
+
+
+.header_user_wellcome_summary::marker {
+  display: none
+}
+
+.header_user_wellcome_summary::after {
+  content: " ⮟";
+}
+
+.header_user_details[open] .header_user_wellcome_summary:after {
+  content: ' ⮜';
+}
+
+.header_user_wellcome_summary {
+	
+}
+
+.modify_user_link {
+	
+}
+
+logout_link {
+	
+}
+/* CONTENT */
+
+
+.content_container{
+	display: flex;
+	flex-direction: row;
+	padding: 1rem 0;
+	max-width: 90%;
+	width: 87rem;
+	justify-content: space-between;
+}
+
+.navbar {
+	width: max-content;
+    height: fit-content;	
+	background-color: white;
+	box-shadow: 0px 10px 15px -3px rgb(38, 24, 16, 0.1);
+    border-radius: 2rem;	
+}
+
+.navbar_ul {
+	list-style: none;
+	margin: 0;
+	padding: 2rem 0;
+}
+
+.navbar_li {
+	
+}
+
+
+.navbar_li {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar_li a{
+	padding: 1rem 2rem;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+}
+
+.navbar_li a:hover{
+    background-color:  #f2a549;
+    color: white;
+    cursor: pointer;
+}
+.navbar_li_selected a{
+	background-color:  #f2a549;
+    color: white;
+}
+
+main {
+	background-color: white;
+	width: 100%;
+	margin-left: 1rem;
+	padding: 3rem;
+    border-radius: 2rem;	
+}
+
+.btn {
+    background-color: #ffec99;
+    border: none;
+    border-radius: none;
+	box-shadow: none;
+	padding: 0.6rem;
+	transition: all linear 0.1s;
+	text-decoration: none;
+	color: #666;
+}
+
+.btn:hover {
+    background-color: #f2a549;
+    color: white;
+	cursor: pointer;
+}
+
+.cancel_btn {
+    background-color: rgb(246, 97, 81);
+	color: white;
+}
+
+.cancel_btn:hover {
+    background-color: rgb(237, 51, 59);
+}
+
+main ul {
+	margin-top: 2rem;
+	list-style: none;
+	padding: 0;
+}
+
+.list_of_camps_li {
+	color: black;
+}
+
+.list_of_camps_li > form{
+	width: 100%;
+}
+
+
+.list_of_camps_li > details {
+	background-color: #d6f3ee;
+}
+
+.list_of_camps_li details {
+	margin-bottom: 1rem;
+	border-radius: 2rem;
+	width: 100%;
+}
+
+.list_of_camps_li details summary {
+	border-radius: 2rem;
+	padding: 2rem;
+	background-color: #5985a5;
+	color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list_of_camps_li details summary::marker {
+  content: "";
+}
+
+.details_div {
+	padding: 1rem 2rem;
+}
+
+.activity_details {
+	background-color: rgb(177, 200, 213);
+}
+
+.activity_details summary{
+	background-color: #5985a5;
+}
+
+main summary:hover {
+	background-color: #d6f3ee;
+	border: 1px solid #5985a5;
+	color: black;
+	cursor: pointer;
+}
+
+/* TABLE */
+
+table {
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+thead {
+    background-color: #5985a5;
+    color: white;
+    border: none;
+}
+
+tbody {
+    background-color: rgb(177, 200, 213);
+}
+
+th {
+    text-align: center;
+	padding: 1rem;
+	
+}
+
+td {
+	padding: 1rem;
+    text-align: center;
+}
+
+tr {
+	
+}
+
+.form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.form_input {	
+    padding: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
+    border: none;
+    border-bottom: 1px solid #666;
+    outline: none;
+}
+
+main h1 {
+    display: block;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.submit_btn {
+    background-color: #ffec99;
+    border: none;
+    border-radius: none;
+	box-shadow: none;
+	padding: 0.6rem;
+	transition: all linear 0.1s;
+}
+
+.submit_btn:hover {
+    background-color: #f2a549;
+    color: white;
+	cursor: pointer;
+}
+
+.form_div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	padding: 1rem;
+}
+
+.form_input:focus {
+    border-bottom: 2px solid #86BBD8;
+    outline: none;
+}
+.form_input::-moz-focus-inner {
+    border-bottom: 2px solid #86BBD8;
+    outline: none;
+}
+
+.navbar_container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.filter_form {
+	padding: 2rem;
+	background-color: white;
+	box-shadow: 0px 10px 15px -3px rgb(38, 24, 16, 0.1);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.available_camps_li {
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+}
+
+.radio_btn {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  margin: 2rem 0.7rem;
+  display: grid;
+  place-content: center;
+}
+
+.radio_btn::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #f2a549;
+  background-color: CanvasText;
+}
+
+.radio_btn:checked::before {
+  transform: scale(1);
+}
+
+.radio_btn:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
